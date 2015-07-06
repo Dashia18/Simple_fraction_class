@@ -1,6 +1,7 @@
 #include "Simple_fraction.h"
 #include <iostream>
 
+
 void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
 	Simple_fraction::numerator = numerator;
 	Simple_fraction::denominatior = denominatior;

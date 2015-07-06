@@ -1,5 +1,6 @@
-#include <iostream>
 #include "Simple_fraction.h"
+#include <iostream>
+
 
 void add_sf(Simple_fraction sf_a, Simple_fraction sf_b);
 void sub_sf(Simple_fraction sf_a, Simple_fraction sf_b);
@@ -34,7 +35,6 @@ void add_sf(Simple_fraction sf_a, Simple_fraction sf_b){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
 }
-
 void sub_sf(Simple_fraction sf_a, Simple_fraction sf_b){
 	Simple_fraction sub_res;
 	int n1 = sf_a.get_numerator();
