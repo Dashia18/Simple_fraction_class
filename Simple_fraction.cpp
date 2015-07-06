@@ -20,7 +20,7 @@ void Simple_fraction::print_simple_fraction(std::string sf_name){
 			<<Simple_fraction::numerator
 			<<"/"
 			<<Simple_fraction::denominatior
-			<<"\n";
+			<<"\n\n";
 }
 
 void Simple_fraction::simplify_simple_fraction(){
