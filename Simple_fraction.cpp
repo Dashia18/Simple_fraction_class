@@ -2,16 +2,21 @@
 #include <iostream>
 
 
-int Simple_fraction::set_simple_fraction (int numerator, int denominatior){
+void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
+	
 	Simple_fraction::numerator = numerator;
 	if(denominatior==0)
 	{
 		std::cout<<"Input data incorrect!! Denominator cannot be equal 0!"
 			<<"\n\n";
-		return -1;
+		denominatior= 1;
+	}
+	
+	if(numerator==0)
+	{
+		denominatior= 1;
 	}
 	Simple_fraction::denominatior = denominatior;
-
 }
 int Simple_fraction::get_numerator(){
 	return Simple_fraction::numerator;
@@ -22,7 +27,7 @@ int Simple_fraction::get_denominatior(){
 
 void Simple_fraction::print_simple_fraction(std::string sf_name){
 	    
-		if(Simple_fraction::denominatior==1)
+		if(Simple_fraction::denominatior==1 || Simple_fraction::numerator==0 )
 		{
 			std::cout<<"Simple fraction "
 				<<sf_name
