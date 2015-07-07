@@ -30,7 +30,7 @@ void add_sf(Simple_fraction sf_a, Simple_fraction sf_b){
 	int d1 = sf_a.get_denominatior();
 	int n2 = sf_b.get_numerator();
 	int d2 = sf_b.get_denominatior();
-	add_res.set_simple_fraction((n1*d2 + n2*d1),(d1*d2));
+	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
 	add_res.print_simple_fraction("add_res");
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
@@ -41,7 +41,7 @@ void sub_sf(Simple_fraction sf_a, Simple_fraction sf_b){
 	int d1 = sf_a.get_denominatior();
 	int n2 = sf_b.get_numerator();
 	int d2 = sf_b.get_denominatior();
-	sub_res.set_simple_fraction((n1*d2 - n2*d1),(d1*d2));
+	sub_res.set_simple_fraction((n1 * d2 - n2 * d1),(d1 * d2));
 	sub_res.print_simple_fraction("sub_res");
 	sub_res.simplify_simple_fraction();
 	sub_res.print_simple_fraction("sub_res");

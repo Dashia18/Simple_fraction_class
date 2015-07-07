@@ -16,6 +16,7 @@ void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
 	{
 		denominatior= 1;
 	}
+
 	Simple_fraction::denominatior = denominatior;
 }
 int Simple_fraction::get_numerator(){
