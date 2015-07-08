@@ -67,3 +67,53 @@ void Simple_fraction::simplify_simple_fraction(){
 	std::cout<<"Fraction is simple yet\n";
 	}
 }
+
+
+//operations
+void Simple_fraction::add_sf(Simple_fraction sf_b){
+	Simple_fraction add_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_b.get_numerator();
+	int d2 = sf_b.get_denominatior();
+	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
+	add_res.print_simple_fraction("add_res");
+	add_res.simplify_simple_fraction();
+	add_res.print_simple_fraction("add_res");
+}
+
+void Simple_fraction::sub_sf(Simple_fraction sf_b){
+	Simple_fraction sub_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_b.get_numerator();
+	int d2 = sf_b.get_denominatior();
+	sub_res.set_simple_fraction((n1 * d2 - n2 * d1),(d1 * d2));
+	sub_res.print_simple_fraction("sub_res");
+	sub_res.simplify_simple_fraction();
+	sub_res.print_simple_fraction("sub_res");
+}
+
+void Simple_fraction::mul_sf(Simple_fraction sf_b){
+	Simple_fraction mul_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_b.get_numerator();
+	int d2 = sf_b.get_denominatior();
+	mul_res.set_simple_fraction((n1 * n2),(d1 * d2));
+	mul_res.print_simple_fraction("mul_res");
+	mul_res.simplify_simple_fraction();
+	mul_res.print_simple_fraction("mul_res");
+}
+
+void Simple_fraction::div_sf(Simple_fraction sf_b){
+	Simple_fraction div_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_b.get_numerator();
+	int d2 = sf_b.get_denominatior();
+	div_res.set_simple_fraction((n1 * d2),(d1 * n2));
+	div_res.print_simple_fraction("div_res");
+	div_res.simplify_simple_fraction();
+	div_res.print_simple_fraction("div_res");
+}

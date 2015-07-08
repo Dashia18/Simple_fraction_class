@@ -9,6 +9,12 @@ public:
 	void print_simple_fraction(std::string sf_name);
 	void simplify_simple_fraction();
 
+	//operations
+	void add_sf(Simple_fraction sf_b);
+	void sub_sf(Simple_fraction sf_b);
+	void mul_sf(Simple_fraction sf_b);
+	void div_sf(Simple_fraction sf_b);
+
 	
 private:
 	int numerator;
