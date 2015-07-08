@@ -57,18 +57,45 @@ void Simple_fraction::print_simple_fraction(std::string sf_name){
 }
 
 void Simple_fraction::simplify_simple_fraction(){
-	int min_v = (abs(numerator)<abs(denominatior))?abs(numerator):abs(denominatior);//abs!!!
+	bool tipe_of_simplify = 1; // 0 - min(abs(numerator,denominatior)) 1 - Euclid Algorithm 
 	int simplify_done = 0;
-	for (int n = min_v; n > 1; n--){
+	int NOD;
 
-		if ((Simple_fraction::numerator % n == 0) && (Simple_fraction::denominatior % n == 0))
+	if (tipe_of_simplify==0)
+	{
+		int min_v = (abs(numerator)<abs(denominatior))?abs(numerator):abs(denominatior);//abs!!!
+		for (int n = min_v; n > 1; n--){
+			if ((Simple_fraction::numerator % n == 0) && (Simple_fraction::denominatior % n == 0))
+			{
+				NOD = n;
+			}
+		} 
+	} 
+	else
+	{
+		int a = numerator;
+		int b = denominatior;
+
+		while (a!=b)
 		{
-			Simple_fraction::numerator = Simple_fraction::numerator / n;
-			Simple_fraction::denominatior = Simple_fraction::denominatior / n;
-			
-			simplify_done = 1;
-			std::cout<<"Simplify done\n";
+			if (a>b)
+			{
+				a=a-b;
+			} 
+			else
+			{
+				b=b-a;
+			}
 		}
+		NOD = a;	
+	}
+
+	if (NOD!=1)
+	{
+		Simple_fraction::numerator = Simple_fraction::numerator / NOD;
+		Simple_fraction::denominatior = Simple_fraction::denominatior / NOD;
+		simplify_done = 1;
+		std::cout<<"Simplify done\n";
 	} 
 	if(!simplify_done)
 	{
