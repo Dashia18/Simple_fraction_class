@@ -1,22 +1,29 @@
 #include "Simple_fraction.h"
 #include <iostream>
+#include <math.h>
 
 
 void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
 	
-	Simple_fraction::numerator = numerator;
-	if(denominatior==0)
+	
+	if(denominatior==0)//???
 	{
 		std::cout<<"Input data incorrect!! Denominator cannot be equal 0!"
 			<<"\n\n";
 		denominatior= 1;
 	}
 	
-	if(numerator==0)
+	if(numerator==0)//???
 	{
 		denominatior= 1;
 	}
+	if (denominatior < 0)//???
+	{
+		numerator = numerator * (-1);
+		denominatior = denominatior * (-1);
+	}
 
+	Simple_fraction::numerator = numerator;
 	Simple_fraction::denominatior = denominatior;
 }
 int Simple_fraction::get_numerator(){
@@ -28,7 +35,7 @@ int Simple_fraction::get_denominatior(){
 
 void Simple_fraction::print_simple_fraction(std::string sf_name){
 	    
-		if(Simple_fraction::denominatior==1 || Simple_fraction::numerator==0 )
+		if(Simple_fraction::denominatior==1 || Simple_fraction::numerator==0 )//???
 		{
 			std::cout<<"Simple fraction "
 				<<sf_name
@@ -36,6 +43,7 @@ void Simple_fraction::print_simple_fraction(std::string sf_name){
 				<<Simple_fraction::numerator
 				<<"\n\n";
 		}
+		
 		else
 		{
 			std::cout<<"Simple fraction "
@@ -49,7 +57,7 @@ void Simple_fraction::print_simple_fraction(std::string sf_name){
 }
 
 void Simple_fraction::simplify_simple_fraction(){
-	int min_v = (numerator<denominatior)?numerator:denominatior;
+	int min_v = (abs(numerator)<abs(denominatior))?abs(numerator):abs(denominatior);//abs!!!
 	int simplify_done = 0;
 	for (int n = min_v; n > 1; n--){
 
@@ -81,7 +89,6 @@ void Simple_fraction::add_sf(Simple_fraction sf_b){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
 }
-
 void Simple_fraction::sub_sf(Simple_fraction sf_b){
 	Simple_fraction sub_res;
 	int n1 = numerator;
@@ -93,7 +100,6 @@ void Simple_fraction::sub_sf(Simple_fraction sf_b){
 	sub_res.simplify_simple_fraction();
 	sub_res.print_simple_fraction("sub_res");
 }
-
 void Simple_fraction::mul_sf(Simple_fraction sf_b){
 	Simple_fraction mul_res;
 	int n1 = numerator;
@@ -105,7 +111,6 @@ void Simple_fraction::mul_sf(Simple_fraction sf_b){
 	mul_res.simplify_simple_fraction();
 	mul_res.print_simple_fraction("mul_res");
 }
-
 void Simple_fraction::div_sf(Simple_fraction sf_b){
 	Simple_fraction div_res;
 	int n1 = numerator;
