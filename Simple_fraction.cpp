@@ -5,7 +5,7 @@
 
 void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
 	
-	
+	//condition  1
 	if(denominatior==0)//???
 	{
 		std::cout<<"Input data incorrect!! Denominator cannot be equal 0!"
@@ -13,10 +13,13 @@ void Simple_fraction::set_simple_fraction (int numerator, int denominatior){
 		denominatior= 1;
 	}
 	
+	//condition  2
 	if(numerator==0)//???
 	{
 		denominatior= 1;
 	}
+
+	//condition  3
 	if (denominatior < 0)//???
 	{
 		numerator = numerator * (-1);
