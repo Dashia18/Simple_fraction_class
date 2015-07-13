@@ -34,10 +34,10 @@ bool Simple_fraction::set_simple_fraction (int num, int den){
 	}
 }
 
-int Simple_fraction::get_numerator(){
+int Simple_fraction::get_numerator() const{
 	return numerator;
 }
-int Simple_fraction::get_denominatior(){
+int Simple_fraction::get_denominatior() const{
 	return denominatior;
 }
 
@@ -113,7 +113,7 @@ void Simple_fraction::simplify_simple_fraction(){
 
 
 //operations
-void Simple_fraction::add_sf(Simple_fraction& sf_b){
+void Simple_fraction::add_sf(const Simple_fraction& sf_b){
 	Simple_fraction add_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -124,7 +124,7 @@ void Simple_fraction::add_sf(Simple_fraction& sf_b){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
 }
-void Simple_fraction::sub_sf(Simple_fraction& sf_b){
+void Simple_fraction::sub_sf(const Simple_fraction& sf_b){
 	Simple_fraction sub_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -135,7 +135,7 @@ void Simple_fraction::sub_sf(Simple_fraction& sf_b){
 	sub_res.simplify_simple_fraction();
 	sub_res.print_simple_fraction("sub_res");
 }
-void Simple_fraction::mul_sf(Simple_fraction& sf_b){
+void Simple_fraction::mul_sf(const Simple_fraction& sf_b){
 	Simple_fraction mul_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -146,7 +146,7 @@ void Simple_fraction::mul_sf(Simple_fraction& sf_b){
 	mul_res.simplify_simple_fraction();
 	mul_res.print_simple_fraction("mul_res");
 }
-void Simple_fraction::div_sf(Simple_fraction& sf_b){
+void Simple_fraction::div_sf(const Simple_fraction& sf_b){
 	Simple_fraction div_res;
 	int n1 = numerator;
 	int d1 = denominatior;

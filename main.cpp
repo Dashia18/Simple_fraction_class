@@ -7,7 +7,7 @@ int main(){
 	Simple_fraction sf_b;
 	bool fa, fb;
 
-	sf_a.set_simple_fraction(3,0);
+	sf_a.set_simple_fraction(3,4);
 	sf_b.set_simple_fraction(1,2);
 
 	if(sf_a.set_simple_fraction(3,0) == false)
