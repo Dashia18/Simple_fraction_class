@@ -3,7 +3,7 @@
 class Simple_fraction{
 
 public:
-	void set_simple_fraction(int num, int den);
+	bool set_simple_fraction(int num, int den);
 	int get_numerator();
 	int get_denominatior();
 	void print_simple_fraction(const std::string& sf_name);

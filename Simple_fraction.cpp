@@ -3,13 +3,14 @@
 #include <math.h>
 
 
-void Simple_fraction::set_simple_fraction (int num, int den){
-	
+bool Simple_fraction::set_simple_fraction (int num, int den){
+	return true;
 	//condition  1
 	if(den==0)
 	{
 		std::cout<<"Input data incorrect!! Denominator cannot be equal 0!"
 			<<"\n\n";
+		return false;
 		den= 1;
 	}
 	
