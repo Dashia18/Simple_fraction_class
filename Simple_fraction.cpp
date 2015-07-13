@@ -4,7 +4,7 @@
 
 
 bool Simple_fraction::set_simple_fraction (int num, int den){
-	return true;
+	
 	//condition  1
 	if(den==0)
 	{
@@ -13,7 +13,8 @@ bool Simple_fraction::set_simple_fraction (int num, int den){
 		return false;
 		den= 1;
 	}
-	
+	else
+	{
 	//condition  2
 	if(num==0)
 	{
@@ -29,7 +30,10 @@ bool Simple_fraction::set_simple_fraction (int num, int den){
 
 	numerator = num;
 	denominatior = den;
+	return true;
+	}
 }
+
 int Simple_fraction::get_numerator(){
 	return numerator;
 }
