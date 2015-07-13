@@ -10,6 +10,7 @@ void Simple_fraction::set_simple_fraction (int num, int den){
 	{
 		std::cout<<"Input data incorrect!! Denominator cannot be equal 0!"
 			<<"\n\n";
+		
 		den= 1;
 	}
 	
@@ -28,6 +29,7 @@ void Simple_fraction::set_simple_fraction (int num, int den){
 
 	numerator = num;
 	denominatior = den;
+	
 }
 int Simple_fraction::get_numerator(){
 	return numerator;
@@ -36,7 +38,7 @@ int Simple_fraction::get_denominatior(){
 	return denominatior;
 }
 
-void Simple_fraction::print_simple_fraction(const std::string& sf_name){
+void Simple_fraction::print_simple_fraction(std::string& sf_name){
 	    
 		if(Simple_fraction::denominatior==1 || Simple_fraction::numerator==0 )//???
 		{
@@ -108,7 +110,7 @@ void Simple_fraction::simplify_simple_fraction(){
 
 
 //operations
-void Simple_fraction::add_sf(Simple_fraction& sf_b){
+void Simple_fraction::add_sf(const Simple_fraction& sf_b){
 	Simple_fraction add_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -119,7 +121,7 @@ void Simple_fraction::add_sf(Simple_fraction& sf_b){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
 }
-void Simple_fraction::sub_sf(Simple_fraction& sf_b){
+void Simple_fraction::sub_sf( Simple_fraction& sf_b){
 	Simple_fraction sub_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -130,7 +132,7 @@ void Simple_fraction::sub_sf(Simple_fraction& sf_b){
 	sub_res.simplify_simple_fraction();
 	sub_res.print_simple_fraction("sub_res");
 }
-void Simple_fraction::mul_sf(Simple_fraction& sf_b){
+void Simple_fraction::mul_sf( Simple_fraction& sf_b){
 	Simple_fraction mul_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -141,7 +143,7 @@ void Simple_fraction::mul_sf(Simple_fraction& sf_b){
 	mul_res.simplify_simple_fraction();
 	mul_res.print_simple_fraction("mul_res");
 }
-void Simple_fraction::div_sf(Simple_fraction& sf_b){
+void Simple_fraction::div_sf( Simple_fraction& sf_b){
 	Simple_fraction div_res;
 	int n1 = numerator;
 	int d1 = denominatior;
