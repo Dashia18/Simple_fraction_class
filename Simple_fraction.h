@@ -8,13 +8,16 @@ public:
 	int get_denominatior() const;
 	void print_simple_fraction(const std::string& sf_name);
 	void simplify_simple_fraction();
+	
 
 	//operations
 	void add_sf(const Simple_fraction& sf_b);
+
 	void sub_sf(const Simple_fraction& sf_b);
 	void mul_sf(const Simple_fraction& sf_b);
 	void div_sf(const Simple_fraction& sf_b);
-
+	//int
+	void add(int int_c);
 	
 private:
 	int numerator;
