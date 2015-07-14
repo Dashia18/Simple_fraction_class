@@ -15,17 +15,22 @@ int main(){
 	
 	sf_a.print_simple_fraction("sf_a");
 	sf_b.print_simple_fraction("sf_b");
-	print_number("int_c", int_c);
-	print_number("double_d", double_d);
 
-	
-	sf_a.add_i(int_c);
-	add_res = sf_a.add_d(double_d);
-	print_number("add_res = sf_a + double_d", add_res);
-	//sf_a.add_sf(sf_b);
+	sf_a.add_sf(sf_b);
 	//sf_a.sub_sf(sf_b);
 	//sf_a.mul_sf(sf_b);
 	//sf_a.div_sf(sf_b);
+
+
+	print_number("int_c", int_c);	
+	sf_a.add_i(int_c);
+
+	add_res = sf_a.add_d(double_d);
+	print_number("double_d", double_d);
+	print_number("add_res = sf_a + double_d", add_res);
+	
+	
+	
 
 	
 	return 0;
