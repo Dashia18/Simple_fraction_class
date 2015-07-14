@@ -159,7 +159,7 @@ void Simple_fraction::div_sf(const Simple_fraction& sf_b){
 }
 
 //int
-void Simple_fraction::add(int int_c){
+void Simple_fraction::add_i(int int_c){
 	Simple_fraction add_res;
 	int n1 = numerator;
 	int d1 = denominatior;
@@ -169,4 +169,10 @@ void Simple_fraction::add(int int_c){
 	add_res.print_simple_fraction("add_res");
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
+}
+
+double Simple_fraction::add_d(double double_d){
+double double_sf = double(numerator)/double(denominatior);
+double add_res = double_sf + double_d;
+return add_res;
 }

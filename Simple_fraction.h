@@ -12,12 +12,14 @@ public:
 
 	//operations
 	void add_sf(const Simple_fraction& sf_b);
-
 	void sub_sf(const Simple_fraction& sf_b);
 	void mul_sf(const Simple_fraction& sf_b);
 	void div_sf(const Simple_fraction& sf_b);
 	//int
-	void add(int int_c);
+	void add_i(int int_c);
+
+	//double
+	double add_d(double double_d);
 	
 private:
 	int numerator;
