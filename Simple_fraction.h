@@ -15,6 +15,11 @@ public:
 	void sub_sf(const Simple_fraction& sf_b);
 	void mul_sf(const Simple_fraction& sf_b);
 	void div_sf(const Simple_fraction& sf_b);
+
+	//operator overloading(+)
+	Simple_fraction operator+ (const Simple_fraction& sf_b);
+
+	//Int & double
 	//int
 	void add_i(int int_c);
 

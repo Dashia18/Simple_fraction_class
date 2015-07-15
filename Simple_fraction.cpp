@@ -158,7 +158,25 @@ void Simple_fraction::div_sf(const Simple_fraction& sf_b){
 	div_res.print_simple_fraction("div_res");
 }
 
-//int
+//operator overloading (+)
+Simple_fraction Simple_fraction::operator+ (const Simple_fraction& sf_b){
+	Simple_fraction add_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_b.get_numerator();
+	int d2 = sf_b.get_denominatior();
+	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
+	add_res.print_simple_fraction("add_res");
+	add_res.simplify_simple_fraction();
+	add_res.print_simple_fraction("add_res");
+	return add_res;
+}
+
+
+
+
+//Int & double
+//int add
 void Simple_fraction::add_i(int int_c){
 	Simple_fraction add_res;
 	int n1 = numerator;
@@ -170,7 +188,7 @@ void Simple_fraction::add_i(int int_c){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res");
 }
-
+//double add
 double Simple_fraction::add_d(double double_d){
 double double_sf = double(numerator)/double(denominatior);
 double add_res = double_sf + double_d;
