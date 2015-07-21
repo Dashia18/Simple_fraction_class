@@ -14,6 +14,11 @@ void make_value_like_fraction(const T& val,Simple_fraction& val_make_fraction){
 	val_make_fraction.simplify_simple_fraction();
 	val_make_fraction.print_simple_fraction("val_make_fraction");//test
 }
+double meke_double_value(Simple_fraction& summ_a_d){
+	double d_val = double(summ_a_d.get_numerator())/double(summ_a_d.get_denominatior());	
+	std::cout<<"Summa  sf_a + sf_d double:\n\n"<<d_val;
+	return d_val;
+}
 
 int main(){
 	//announcement
@@ -39,8 +44,9 @@ int main(){
 	std::cout<<"Summa  sf_a + sf_c \n\n";
 	sf_a + sf_c;
 	std::cout<<"Summa  sf_a + sf_d \n\n";
-	sf_a + sf_d;
-
+	Simple_fraction summ_a_d = sf_a + sf_d;
+	meke_double_value(summ_a_d);
+	
 	//sf_a - sf_b;
 	//sf_a * sf_b;
 	//sf_a / sf_b;
