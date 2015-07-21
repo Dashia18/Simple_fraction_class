@@ -15,15 +15,6 @@ public:
 	Simple_fraction operator- (const Simple_fraction& sf_b);
 	Simple_fraction operator* (const Simple_fraction& sf_b);
 	Simple_fraction operator/ (const Simple_fraction& sf_b);
-
-	
-
-	//Int & double
-	//int
-	void add_i(int int_c);
-
-	//double
-	double add_d(double double_d);
 	
 private:
 	int numerator;
