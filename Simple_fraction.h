@@ -9,15 +9,11 @@ public:
 	void print_simple_fraction(const std::string& sf_name);
 	void simplify_simple_fraction();
 	
-
-	//operations
-	void add_sf(const Simple_fraction& sf_b);
-	void sub_sf(const Simple_fraction& sf_b);
-	void mul_sf(const Simple_fraction& sf_b);
-	void div_sf(const Simple_fraction& sf_b);
-
-	//operator overloading(+)
+	//operator overloading
 	Simple_fraction operator+ (const Simple_fraction& sf_b);
+	Simple_fraction operator- (const Simple_fraction& sf_b);
+	Simple_fraction operator* (const Simple_fraction& sf_b);
+	Simple_fraction operator/ (const Simple_fraction& sf_b);
 
 	//Int & double
 	//int
