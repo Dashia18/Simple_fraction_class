@@ -17,7 +17,7 @@ int main(){
 	sf_b.print_simple_fraction("sf_b");
 
 
-	//operator overloading(+)
+	//operator overloading (+,-,*,/)
 	sf_a + sf_b;
 	sf_a - sf_b;
 	sf_a * sf_b;
