@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 class Simple_fraction{
 
@@ -9,11 +10,13 @@ public:
 	void print_simple_fraction(const std::string& sf_name);
 	void simplify_simple_fraction();
 	
-	//operator overloading
+	//operator overloading (+,-,*,/)
 	Simple_fraction operator+ (const Simple_fraction& sf_b);
 	Simple_fraction operator- (const Simple_fraction& sf_b);
 	Simple_fraction operator* (const Simple_fraction& sf_b);
 	Simple_fraction operator/ (const Simple_fraction& sf_b);
+
+	
 
 	//Int & double
 	//int
