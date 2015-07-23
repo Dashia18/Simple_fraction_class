@@ -161,3 +161,22 @@ Simple_fraction Simple_fraction::operator/ (const Simple_fraction& sf_b){
 	div_res.print_simple_fraction("div_res");
 	return div_res;
 }
+
+double Simple_fraction::operator+ (const double& sf_d){
+	double add_res;
+	double sf_a = double(numerator)/double(denominatior);
+	add_res = sf_a + sf_d;
+	return add_res;
+}
+Simple_fraction Simple_fraction::operator+ (const int& sf_c){
+	Simple_fraction add_res;
+	int n1 = numerator;
+	int d1 = denominatior;
+	int n2 = sf_c;
+	int d2 = 1;
+	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
+	add_res.print_simple_fraction("add_res_a_c");
+	add_res.simplify_simple_fraction();
+	add_res.print_simple_fraction("add_res_a_c");
+	return add_res;
+}
