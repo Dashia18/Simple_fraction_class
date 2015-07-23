@@ -1,6 +1,6 @@
 #include "Simple_fraction.h"
 #include <iostream>
-#include <math.h>
+#include <cstdlib>
 
 
 bool Simple_fraction::set_simple_fraction (int num, int den){
@@ -71,7 +71,7 @@ void Simple_fraction::simplify_simple_fraction(){
 
 	if (tipe_of_simplify==0)
 	{
-		int min_v = (abs(numerator)<abs(denominatior))?abs(numerator):abs(denominatior);//abs!!!
+		int min_v = (std::abs(numerator)<std::abs(denominatior))?std::abs(numerator):std::abs(denominatior);//abs!!!
 		for (int n = min_v; n > 1; n--){
 			if ((numerator % n == 0) && (denominatior % n == 0))
 			{

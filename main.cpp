@@ -17,7 +17,7 @@ int main(){
 
 	//print values
 	sf_a.print_simple_fraction("sf_a");
-	std::cout<<sf_a;
+	//std::cout<<sf_a;
 
 
 
