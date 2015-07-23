@@ -17,7 +17,8 @@ public:
 	Simple_fraction operator/ (const Simple_fraction& sf_b);
 
 	double operator+ (const double& sf_d);
-	Simple_fraction operator+ (const int& sf_c);
+	Simple_fraction operator+ (const int& sf_d);
+	std::ostream& operator<< (const Simple_fraction& sf_a);
 	
 private:
 	int numerator;

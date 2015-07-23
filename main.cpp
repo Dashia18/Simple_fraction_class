@@ -2,21 +2,26 @@
 #include <iostream>
 
 
+
 int main(){
 	//announcement
 	Simple_fraction sf_a;
-	Simple_fraction sf_b;
+	Simple_fraction sf_b;	
 	
-	double add_sf_a_doudle_d;
 
-	//initialization
-	int int_c = 2; 
-	double double_d = 2.357435;
+	//initialization	
 	sf_a.set_simple_fraction(3,4);
 	sf_b.set_simple_fraction(1,2);
+	int int_c = 2; 
+	double double_d = 2.357435;
 
 	//print values
 	sf_a.print_simple_fraction("sf_a");
+	std::cout<<sf_a;
+
+
+
+
 	sf_b.print_simple_fraction("sf_b");
 	std::cout<<"int_c = "<< int_c<<"\n\n";
 	std::cout<<"double_d = "<< double_d<<"\n\n";

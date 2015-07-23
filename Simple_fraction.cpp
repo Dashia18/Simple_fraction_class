@@ -112,7 +112,7 @@ void Simple_fraction::simplify_simple_fraction(){
 }
 
 
-//operator overloading (+,-,*,/)
+//operator overloading Simple_fraction + Simple_fraction (+,-,*,/)
 Simple_fraction Simple_fraction::operator+ (const Simple_fraction& sf_b){
 	Simple_fraction add_res;
 	int n1 = numerator;
@@ -162,12 +162,15 @@ Simple_fraction Simple_fraction::operator/ (const Simple_fraction& sf_b){
 	return div_res;
 }
 
+//operator overloading Simple_fraction + double (+,-,*,/)
 double Simple_fraction::operator+ (const double& sf_d){
 	double add_res;
 	double sf_a = double(numerator)/double(denominatior);
 	add_res = sf_a + sf_d;
 	return add_res;
 }
+
+//operator overloading Simple_fraction + int (+,-,*,/)
 Simple_fraction Simple_fraction::operator+ (const int& sf_c){
 	Simple_fraction add_res;
 	int n1 = numerator;
@@ -179,4 +182,11 @@ Simple_fraction Simple_fraction::operator+ (const int& sf_c){
 	add_res.simplify_simple_fraction();
 	add_res.print_simple_fraction("add_res_a_c");
 	return add_res;
+}
+
+//operator overloading print << Simple_fraction
+std::ostream& Simple_fraction::operator<< (const Simple_fraction& sf_a){
+
+	std::cout<<numerator<<"/"<<denominatior;
+	return std::cout;
 }
