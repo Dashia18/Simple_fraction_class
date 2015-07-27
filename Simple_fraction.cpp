@@ -40,6 +40,15 @@ int Simple_fraction::get_numerator() const{
 int Simple_fraction::get_denominatior() const{
 	return denominatior;
 }
+Simple_fraction::Simple_fraction(){
+	set_simple_fraction(0, 1);
+
+}
+
+Simple_fraction::Simple_fraction(int num, int den){
+	set_simple_fraction(num, den);
+}
+
 
 void Simple_fraction::print_simple_fraction(const std::string& sf_name){
 	    
@@ -115,10 +124,12 @@ void Simple_fraction::simplify_simple_fraction(){
 //operator overloading Simple_fraction + Simple_fraction (+,-,*,/)
 Simple_fraction Simple_fraction::operator+ (const Simple_fraction& sf_b){
 	Simple_fraction add_res;
-	int n1 = numerator;
-	int d1 = denominatior;
-	int n2 = sf_b.get_numerator();
-	int d2 = sf_b.get_denominatior();
+	int n1, d1, n2, d2;
+	n1 = numerator;
+	d1 = denominatior;
+	n2 = sf_b.get_numerator();
+	d2 = sf_b.get_denominatior();
+	
 	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
 	add_res.print_simple_fraction("add_res");
 	add_res.simplify_simple_fraction();

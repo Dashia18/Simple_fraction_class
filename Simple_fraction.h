@@ -5,6 +5,8 @@ class Simple_fraction{
 
 public:
 	bool set_simple_fraction(int num, int den);
+	Simple_fraction();
+	Simple_fraction(int num, int den);
 	int get_numerator() const;
 	int get_denominatior() const;
 	void print_simple_fraction(const std::string& sf_name);
@@ -23,4 +25,5 @@ public:
 private:
 	int numerator;
 	int denominatior;
+	Simple_fraction(double num, double den);
 };

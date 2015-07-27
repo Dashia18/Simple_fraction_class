@@ -10,8 +10,8 @@ int main(){
 	
 
 	//initialization	
-	sf_a.set_simple_fraction(3,4);
-	sf_b.set_simple_fraction(1,2);
+	sf_a = Simple_fraction(3,4);
+	sf_b= Simple_fraction(1,2);
 	int int_c = 2; 
 	double double_d = 2.357435;
 
@@ -27,8 +27,9 @@ int main(){
 	std::cout<<"double_d = "<< double_d<<"\n\n";
 	
 	//operator overloading (+,-,*,/)
+
 	Simple_fraction add_a_c = sf_a + int_c;
-	
+	sf_a + sf_b;
 
 	std::cout<<"Summa  sf_a + double_d = ";
 	double summ_a_d = sf_a + double_d;
