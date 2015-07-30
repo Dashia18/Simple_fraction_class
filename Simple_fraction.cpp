@@ -198,6 +198,6 @@ Simple_fraction Simple_fraction::operator+ (const int& sf_c){
 //operator overloading print << Simple_fraction
 std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a){
 
-	out<<"(operator >> overloading) SF = "<<sf_a.Simple_fraction::get_numerator()<<"/"<<sf_a.Simple_fraction::get_denominatior()<<"\n\n";
+	out<<"(operator >> overloading) SF = "<<sf_a.get_numerator()<<"/"<<sf_a.get_denominatior()<<"\n\n";
 	return out;
 }
