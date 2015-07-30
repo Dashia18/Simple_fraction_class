@@ -20,7 +20,7 @@ public:
 
 	double operator+ (const double& sf_d);
 	Simple_fraction operator+ (const int& sf_d);
-	std::ostream& operator<< (const Simple_fraction& sf_a);
+	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);
 	
 private:
 	int numerator;

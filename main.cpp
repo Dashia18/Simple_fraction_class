@@ -17,23 +17,23 @@ int main(){
 
 	//print values
 	sf_a.print_simple_fraction("sf_a");
-	//std::cout<<sf_a;
+	std::cout<<sf_a;
 
 
 
 
 	sf_b.print_simple_fraction("sf_b");
-	std::cout<<"int_c = "<< int_c<<"\n\n";
-	std::cout<<"double_d = "<< double_d<<"\n\n";
+	//std::cout<<"int_c = "<< int_c<<"\n\n";
+	//std::cout<<"double_d = "<< double_d<<"\n\n";
 	
 	//operator overloading (+,-,*,/)
 
 	Simple_fraction add_a_c = sf_a + int_c;
 	sf_a + sf_b;
 
-	std::cout<<"Summa  sf_a + double_d = ";
+	//std::cout<<"Summa  sf_a + double_d = ";
 	double summ_a_d = sf_a + double_d;
-	std::cout<< summ_a_d<<"\n\n";
+	//std::cout<< summ_a_d<<"\n\n";
 
 	
 	//sf_a - sf_b;
