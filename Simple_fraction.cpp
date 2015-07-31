@@ -201,3 +201,4 @@ std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a){
 	out<<"(operator >> overloading) SF = "<<sf_a.get_numerator()<<"/"<<sf_a.get_denominatior()<<"\n\n";
 	return out;
 }
+

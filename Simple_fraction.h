@@ -10,7 +10,7 @@ public:
 	int get_numerator() const;
 	int get_denominatior() const;
 	void print_simple_fraction(const std::string& sf_name);
-	void simplify_simple_fraction();
+	
 	
 	//operator overloading (+,-,*,/)
 	Simple_fraction operator+ (const Simple_fraction& sf_b);
@@ -20,10 +20,14 @@ public:
 
 	double operator+ (const double& sf_d);
 	Simple_fraction operator+ (const int& sf_d);
-	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);
+
+	 
 	
 private:
 	int numerator;
 	int denominatior;
 	Simple_fraction(double num, double den);
+	void simplify_simple_fraction();
+	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);
+	
 };
