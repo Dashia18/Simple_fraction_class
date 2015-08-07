@@ -23,7 +23,6 @@ int main(){
 	//operator overloading (+,-,*,/)
     std::cout<<"Summa  sf_a + sf_b \n";		sf_a + sf_b;
 	std::cout<<"Summa  int_c + sf_a \n";	int_c + sf_a;
-	std::cout<<"Summa  sf_a + double_d = ";	sf_a + double_d;
 	std::cout<<"Summa  double_d + sf_a = ";	double_d +sf_a;
 		
 	//sf_a - sf_b;

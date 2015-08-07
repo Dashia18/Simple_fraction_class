@@ -13,23 +13,23 @@ public:
 	void print_simple_fraction(const std::string& sf_name);
 	
 	
-	//operator overloading (+,-,*,/)
+	//operator overloading (+,-,*,/) for sf+sf
 	friend Simple_fraction operator+ (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 	friend Simple_fraction operator- (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 	friend Simple_fraction operator* (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 	friend Simple_fraction operator/ (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 
-	//operator overloading (+,-,*,/) for double
+	//operator overloading (+,-,*,/) for sf+double
 	double operator+ (const double& double_d);
-	friend double operator+ (const double& double_d, const Simple_fraction& sf_a){ 
-		Simple_fraction a = sf_a;
-		double add_res = a + double_d;
-		return add_res;
-		//sf_a + double_d - don`t work
-		};
 	double operator- (const double& double_d);
 	double operator* (const double& double_d);
 	double operator/ (const double& double_d);
+
+	//operator overloading (+,-,*,/) for double+sf
+	friend void operator+ (const double& double_d,  Simple_fraction& sf_a){sf_a + double_d;};
+	friend void operator- (const double& double_d,  Simple_fraction& sf_a){sf_a - double_d;};
+	friend void operator* (const double& double_d,  Simple_fraction& sf_a){sf_a * double_d;};
+	friend void operator/ (const double& double_d,  Simple_fraction& sf_a){sf_a / double_d;};
 
 	//operator overloading (<<) for cout
 	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);
