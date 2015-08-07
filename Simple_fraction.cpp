@@ -40,15 +40,14 @@ int Simple_fraction::get_numerator() const{
 int Simple_fraction::get_denominatior() const{
 	return denominatior;
 }
+
 Simple_fraction::Simple_fraction(){
 	set_simple_fraction(0, 1);
 
 }
-
 Simple_fraction::Simple_fraction(int num, int den){
 	set_simple_fraction(num, den);
 }
-
 Simple_fraction::Simple_fraction(int num){
 	set_simple_fraction(num, 1);
 }
@@ -76,7 +75,6 @@ void Simple_fraction::print_simple_fraction(const std::string& sf_name){
 				<<"\n\n";
 		}
 }
-
 void Simple_fraction::simplify_simple_fraction(){
 	bool tipe_of_simplify = 1; // 0 - min(abs(numerator,denominatior)) 1 - Euclid Algorithm 
 	int simplify_done = 0;
@@ -140,10 +138,10 @@ Simple_fraction operator+ (const Simple_fraction& sf_a, const Simple_fraction& s
 	add_res.print_simple_fraction("add_res");
 	return add_res;
 }
-Simple_fraction Simple_fraction::operator- (const Simple_fraction& sf_b){
+Simple_fraction operator- (const Simple_fraction& sf_a, const Simple_fraction& sf_b){
 	Simple_fraction sub_res;
-	int n1 = numerator;
-	int d1 = denominatior;
+	int n1 = sf_a.get_numerator();
+	int d1 = sf_a.get_denominatior();
 	int n2 = sf_b.get_numerator();
 	int d2 = sf_b.get_denominatior();
 	sub_res.set_simple_fraction((n1 * d2 - n2 * d1),(d1 * d2));
@@ -152,10 +150,10 @@ Simple_fraction Simple_fraction::operator- (const Simple_fraction& sf_b){
 	sub_res.print_simple_fraction("sub_res");
 	return sub_res;
 }
-Simple_fraction Simple_fraction::operator* (const Simple_fraction& sf_b){
+Simple_fraction operator* (const Simple_fraction& sf_a, const Simple_fraction& sf_b){
 	Simple_fraction mul_res;
-	int n1 = numerator;
-	int d1 = denominatior;
+	int n1 = sf_a.get_numerator();
+	int d1 = sf_a.get_denominatior();
 	int n2 = sf_b.get_numerator();
 	int d2 = sf_b.get_denominatior();
 	mul_res.set_simple_fraction((n1 * n2),(d1 * d2));
@@ -164,10 +162,10 @@ Simple_fraction Simple_fraction::operator* (const Simple_fraction& sf_b){
 	mul_res.print_simple_fraction("mul_res");
 	return mul_res;
 }
-Simple_fraction Simple_fraction::operator/ (const Simple_fraction& sf_b){
+Simple_fraction operator/ (const Simple_fraction& sf_a, const Simple_fraction& sf_b){
 	Simple_fraction div_res;
-	int n1 = numerator;
-	int d1 = denominatior;
+	int n1 = sf_a.get_numerator();
+	int d1 = sf_a.get_denominatior();
 	int n2 = sf_b.get_numerator();
 	int d2 = sf_b.get_denominatior();
 	div_res.set_simple_fraction((n1 * d2),(d1 * n2));
@@ -178,31 +176,40 @@ Simple_fraction Simple_fraction::operator/ (const Simple_fraction& sf_b){
 }
 
 //operator overloading Simple_fraction + double (+,-,*,/)
-double Simple_fraction::operator+ (const double& sf_d){
+double Simple_fraction::operator+ (const double& double_d){
 	double add_res;
 	double sf_a = double(numerator)/double(denominatior);
-	add_res = sf_a + sf_d;
+	add_res = sf_a + double_d;
+	std::cout<< add_res<<"\n\n";
 	return add_res;
 }
-
-//operator overloading Simple_fraction + int (+,-,*,/)
-Simple_fraction Simple_fraction::operator+ (const int& sf_c){
-	Simple_fraction add_res;
-	int n1 = numerator;
-	int d1 = denominatior;
-	int n2 = sf_c;
-	int d2 = 1;
-	add_res.set_simple_fraction((n1 * d2 + n2 * d1),(d1 * d2));
-	add_res.print_simple_fraction("add_res_a_c");
-	add_res.simplify_simple_fraction();
-	add_res.print_simple_fraction("add_res_a_c");
-	return add_res;
+double Simple_fraction::operator- (const double& double_d){
+	double sub_res;
+	double sf_a = double(numerator)/double(denominatior);
+	sub_res = sf_a - double_d;
+	std::cout<< sub_res<<"\n\n";
+	return sub_res;
+}
+double Simple_fraction::operator* (const double& double_d){
+	double mult_res;
+	double sf_a = double(numerator)/double(denominatior);
+	mult_res = sf_a * double_d;
+	std::cout<< mult_res<<"\n\n";
+	return mult_res;
+}
+double Simple_fraction::operator/ (const double& double_d){
+	double div_res;
+	double sf_a = double(numerator)/double(denominatior);
+	div_res = sf_a / double_d;
+	std::cout<< div_res<<"\n\n";
+	return div_res;
 }
 
 //operator overloading print << Simple_fraction
 std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a){
 
-	out<<"(operator >> overloading) SF = "<<sf_a.get_numerator()<<"/"<<sf_a.get_denominatior()<<"\n\n";
+	
+	out <<"(operator >> overloading) SF = "<< sf_a.numerator << '/' << sf_a.denominatior<<"\n\n";
 	return out;
 }
 

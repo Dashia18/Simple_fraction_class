@@ -15,12 +15,23 @@ public:
 	
 	//operator overloading (+,-,*,/)
 	friend Simple_fraction operator+ (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
-	Simple_fraction operator- (const Simple_fraction& sf_b);
-	Simple_fraction operator* (const Simple_fraction& sf_b);
-	Simple_fraction operator/ (const Simple_fraction& sf_b);
+	friend Simple_fraction operator- (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
+	friend Simple_fraction operator* (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
+	friend Simple_fraction operator/ (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 
-	double operator+ (const double& sf_d);
-	Simple_fraction operator+ (const int& sf_d);
+	//operator overloading (+,-,*,/) for double
+	double operator+ (const double& double_d);
+	friend double operator+ (const double& double_d, const Simple_fraction& sf_a){ 
+		Simple_fraction a = sf_a;
+		double add_res = a + double_d;
+		return add_res;
+		//sf_a + double_d - don`t work
+		};
+	double operator- (const double& double_d);
+	double operator* (const double& double_d);
+	double operator/ (const double& double_d);
+
+	//operator overloading (<<) for cout
 	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);
 	
 	
@@ -29,6 +40,4 @@ private:
 	int denominatior;
 	Simple_fraction(double num, double den);
 	void simplify_simple_fraction();
-	
-	
 };
