@@ -20,16 +20,16 @@ public:
 	friend Simple_fraction operator/ (const Simple_fraction& sf_a, const Simple_fraction& sf_b);
 
 	//operator overloading (+,-,*,/) for sf+double
-	double operator+ (const double& double_d);
-	double operator- (const double& double_d);
-	double operator* (const double& double_d);
-	double operator/ (const double& double_d);
+	double operator+ (const double& double_d) const;
+	double operator- (const double& double_d) const;
+	double operator* (const double& double_d) const;
+	double operator/ (const double& double_d) const;
 
 	//operator overloading (+,-,*,/) for double+sf
-	friend void operator+ (const double& double_d,  Simple_fraction& sf_a){sf_a + double_d;};
-	friend void operator- (const double& double_d,  Simple_fraction& sf_a){sf_a - double_d;};
-	friend void operator* (const double& double_d,  Simple_fraction& sf_a){sf_a * double_d;};
-	friend void operator/ (const double& double_d,  Simple_fraction& sf_a){sf_a / double_d;};
+	friend void operator+ (const double& double_d, const Simple_fraction& sf_a){sf_a + double_d;};
+	friend void operator- (const double& double_d, const Simple_fraction& sf_a){sf_a - double_d;};
+	friend void operator* (const double& double_d, const Simple_fraction& sf_a){sf_a * double_d;};
+	friend void operator/ (const double& double_d, const Simple_fraction& sf_a){sf_a / double_d;};
 
 	//operator overloading (<<) for cout
 	friend std::ostream& operator<< (std::ostream& out, const Simple_fraction& sf_a);

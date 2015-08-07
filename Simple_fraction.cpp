@@ -176,28 +176,28 @@ Simple_fraction operator/ (const Simple_fraction& sf_a, const Simple_fraction& s
 }
 
 //operator overloading Simple_fraction + double (+,-,*,/)
-double Simple_fraction::operator+ (const double& double_d){
+double Simple_fraction::operator+ (const double& double_d) const{
 	double add_res;
 	double sf_a = double(numerator)/double(denominatior);
 	add_res = sf_a + double_d;
 	std::cout<< add_res<<"\n\n";
 	return add_res;
 }
-double Simple_fraction::operator- (const double& double_d){
+double Simple_fraction::operator- (const double& double_d) const{
 	double sub_res;
 	double sf_a = double(numerator)/double(denominatior);
 	sub_res = sf_a - double_d;
 	std::cout<< sub_res<<"\n\n";
 	return sub_res;
 }
-double Simple_fraction::operator* (const double& double_d){
+double Simple_fraction::operator* (const double& double_d) const{
 	double mult_res;
 	double sf_a = double(numerator)/double(denominatior);
 	mult_res = sf_a * double_d;
 	std::cout<< mult_res<<"\n\n";
 	return mult_res;
 }
-double Simple_fraction::operator/ (const double& double_d){
+double Simple_fraction::operator/ (const double& double_d) const{
 	double div_res;
 	double sf_a = double(numerator)/double(denominatior);
 	div_res = sf_a / double_d;
