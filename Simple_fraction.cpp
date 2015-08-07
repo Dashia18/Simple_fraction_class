@@ -1,6 +1,4 @@
 #include "Simple_fraction.h"
-#include <iostream>
-#include <cstdlib>
 
 
 bool Simple_fraction::set_simple_fraction (int num, int den){
@@ -43,7 +41,6 @@ int Simple_fraction::get_denominatior() const{
 
 Simple_fraction::Simple_fraction(){
 	set_simple_fraction(0, 1);
-
 }
 Simple_fraction::Simple_fraction(int num, int den){
 	set_simple_fraction(num, den);
@@ -53,7 +50,7 @@ Simple_fraction::Simple_fraction(int num){
 }
 
 
-void Simple_fraction::print_simple_fraction(const std::string& sf_name){
+void Simple_fraction::print_simple_fraction(const std::string& sf_name) const{
 	    
 		if(Simple_fraction::denominatior==1 || Simple_fraction::numerator==0 )//???
 		{
@@ -75,9 +72,9 @@ void Simple_fraction::print_simple_fraction(const std::string& sf_name){
 				<<"\n\n";
 		}
 }
-void Simple_fraction::simplify_simple_fraction(){
+bool Simple_fraction::simplify_simple_fraction(){
 	bool tipe_of_simplify = 1; // 0 - min(abs(numerator,denominatior)) 1 - Euclid Algorithm 
-	int simplify_done = 0;
+	bool simplify_done = 0;
 	int NOD;
 
 	if (tipe_of_simplify==0)
@@ -120,6 +117,7 @@ void Simple_fraction::simplify_simple_fraction(){
 	{
 	std::cout<<"Fraction is simple yet\n";
 	}
+	return simplify_done;
 }
 
 

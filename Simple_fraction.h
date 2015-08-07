@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <cstdlib>
 
 class Simple_fraction{
 
@@ -10,7 +11,7 @@ public:
 	Simple_fraction(int num);
 	int get_numerator() const;
 	int get_denominatior() const;
-	void print_simple_fraction(const std::string& sf_name);
+	void print_simple_fraction(const std::string& sf_name) const;
 	
 	
 	//operator overloading (+,-,*,/) for sf+sf
@@ -39,5 +40,5 @@ private:
 	int numerator;
 	int denominatior;
 	Simple_fraction(double num, double den);
-	void simplify_simple_fraction();
+	bool simplify_simple_fraction();
 };
